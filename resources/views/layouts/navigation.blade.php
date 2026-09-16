@@ -15,6 +15,11 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+
+                <!-- TAMBAHKAN MENU ARTICLE DI SINI -->
+                    <x-nav-link :href="route('articles.index')" :active="request()->routeIs('articles.*')">
+                        {{ __('Article') }}
+                    </x-nav-link>
                 </div>
             </div>
 
