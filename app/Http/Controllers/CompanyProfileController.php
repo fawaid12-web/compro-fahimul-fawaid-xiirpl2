@@ -19,9 +19,9 @@ class CompanyProfileController extends Controller
         // Ambil 3 artikel terbaru untuk ditampilkan di landing page
         $articles = Article::latest()->take(3)->get();
 
-        
+
         //KIRIM KE VIEW
-        return view('landing-page.index', compact('dataCompany', 'articles',));
+        return view('landing-page.index', compact('dataCompany', 'articles'));
 
 
 
