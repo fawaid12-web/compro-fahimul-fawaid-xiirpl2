@@ -14,7 +14,7 @@
                     </a>
                 </div>
 
-                <!-- Alert Sukses -->
+                <!-- Alert Sukses (Sudah Ditutup dengan Benar) -->
                 @if (session('success'))
                     <div class="mb-6 p-4 bg-green-50 border-l-4 border-green-500 text-green-700 rounded-r-md">
                         {{ session('success') }}
@@ -52,6 +52,12 @@
                             <div class="px-5 py-4 bg-gray-50 border-t border-gray-100 flex items-center justify-between mt-auto">
                                 <span class="text-xs font-semibold text-gray-400">#{{ $loop->iteration }}</span>
                                 <div class="flex items-center space-x-2">
+
+                                    <!-- Tombol Readmore / Detail -->
+                                    <a href="/articles/{{ $dt->id }}" class="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium rounded-md transition">
+                                        Readmore
+                                    </a>
+
                                     <!-- Tombol Edit -->
                                     <a href="/articles/{{ $dt->id }}/edit" class="px-3 py-1.5 bg-amber-500 hover:bg-amber-600 text-white text-xs font-medium rounded-md transition">
                                         Edit
